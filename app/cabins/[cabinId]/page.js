@@ -20,6 +20,12 @@ export async function generateMetadata({ params }) {
   return { title: `cabin ${name}` };
 }
 
+export async function getStaticParams() {
+  const cabins = await getCabins();
+  const ids = cabins.map((cabin) => ({ cabinId: string(cabin.id) }));
+  return ids;
+}
+
 export default async function Page({ params }) {
   const cabin = await getCabin(params.cabinId);
   console.log("CabinId:", params.CabinId);
