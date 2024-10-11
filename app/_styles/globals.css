@@ -31,9 +31,32 @@
 }
 
 /* For data picker */
+
 .rdp {
   --rdp-cell-size: 32px !important;
   --rdp-accent-color: theme("colors.accent.500") !important;
   --rdp-background-color: theme("colors.accent.600") !important;
   margin: 0 !important;
+}
+.custom-daypicker .rdp-months {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem; /* Adjust the spacing between months */
+}
+
+.custom-daypicker {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  max-width: 100%;
+}
+
+.custom-daypicker .rdp-months {
+  display: flex;
+  gap: 1rem;
+}
+
+.custom-daypicker .rdp {
+  margin: 0 auto;
 }
