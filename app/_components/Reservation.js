@@ -5,10 +5,13 @@ import LoginMessage from "./LoginMessage";
 import ReservationForm from "./ReservationForm";
 
 async function Reservation({ cabin }) {
+  // Fetch settings and booked dates simultaneously
   const [settings, bookedDates] = await Promise.all([
     getSettings(),
     getBookedDatesByCabinId(cabin.id),
   ]);
+
+  // Authenticate user session
   const session = await auth();
 
   return (

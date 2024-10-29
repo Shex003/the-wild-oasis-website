@@ -8,18 +8,12 @@ function CabinCard({ cabin }) {
   return (
     <div className="flex border-primary-800 border">
       <div className="flex-1 relative">
-        {image ? (
-          <Image
-            src={image} // Use the image URL from Supabase directly
-            fill
-            alt={`Cabin ${name}`}
-            className="object-cover border-r border-primary-800"
-          />
-        ) : (
-          <div className="flex items-center justify-center w-full h-full bg-gray-200">
-            <span className="text-gray-600">Image not available</span>
-          </div>
-        )}
+        <Image
+          src={image}
+          fill
+          alt={`Cabin ${name}`}
+          className="object-cover border-r border-primary-800"
+        />
       </div>
 
       <div className="flex-grow">
