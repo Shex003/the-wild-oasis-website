@@ -30,11 +30,31 @@
   }
 }
 
-/* For data picker */
-
+/* For date picker */
 .rdp {
   --rdp-cell-size: 32px !important;
   --rdp-accent-color: theme("colors.accent.500") !important;
   --rdp-background-color: theme("colors.accent.600") !important;
   margin: 0 !important;
+}
+
+.rdp-range_start .rdp-day_button {
+  background-color: rgba(255, 187, 0, 0.886) !important;
+  color: var(--rdp-range_start-color);
+}
+.rdp-range_end .rdp-day_button {
+  color: var(--rdp-range_start-color);
+  background-color: rgba(255, 187, 0, 0.886) !important;
+}
+.rdp-range_middle .rdp-day_button {
+  background-color: rgba(235, 211, 144, 0.333) !important;
+  border-radius: 50% !important;
+  color: rgb(169, 124, 32) !important;
+}
+.rdp-selected .rdp-day_button {
+  border: rgba(255, 187, 0, 0.886) !important ;
+}
+
+.rdp-chevron {
+  fill: rgba(255, 187, 0, 0.886) !important;
 }
